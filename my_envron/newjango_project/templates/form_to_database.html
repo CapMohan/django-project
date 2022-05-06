@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person Contact Form</title>
+</head>
+<body>
+    <h3>Person Contact Information</h3>
+    <hr/>
+    <form method="post" action="/person_contact_infor/">
+        {% if messages %}
+            {% for msg in messages %}
+            <p>{{msg}}</p>
+            {% endfor %}
+        {% endif %}
+        {% csrf_token %}
+        <table border="1" cellpadding="5">
+            <tr>
+                <th>Full_Name</th>
+                <td><input type="text" name="name" /></td>
+            </tr>
+            <tr>
+                <th>Contact Number</th>
+                <td><input type="text" name="contact_num" /></td>
+            </tr>
+            <tr>
+                <th>Permanant Address</th>
+                <td><textarea name="permanant_address"></textarea></td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td><input type="email" name="email" /></td>
+            </tr>
+            <tr>
+                <th>Current Address</th>
+                <td><textarea name="current_address"></textarea></td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td><input type="date"
+                    value="2022-01-01" min="2022-01-01" max="2032-12-31"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Submit" /></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
