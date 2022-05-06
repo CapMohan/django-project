@@ -27,4 +27,7 @@ jobs:
     - name: Install Dependencies
       run: |
         python -m pip install --upgrade pip
+    - name: Run code
+      run: |
+        python manage.py runserver
 
