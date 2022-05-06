@@ -32,6 +32,6 @@ jobs:
       run: |
         python manage.py makemigrations
         python manage.py migrate
-    - name: Run code
-      run: python manage.py runserver
+#     - name: Run code
+#       run: python manage.py runserver
 
