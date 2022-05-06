@@ -25,7 +25,9 @@ urlpatterns = [
     path("demo/", demo, name="demo"),
     path("first/", first, name="first"),
     path("base/", base, name="base"),
+    #Below path is used for to create or to store person details into database.
     path("person_contact_infor/", person_contact_infor, name="person_contact_infor"),
+    #Below path is used for to get details from database, which details we have stored in database using above path.
     path("person_info/", person_info, name="person_info")
 ]
 

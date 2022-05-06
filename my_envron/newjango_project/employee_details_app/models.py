@@ -28,12 +28,13 @@ class Employees_details(models.Model):
 
 class Person_contact_details(models.Model):
     full_name = models.CharField(max_length=100)
+    company_name = models.CharField(max_length=100)
+    company_location = models.CharField(max_length=100)
     contact_num = models.CharField(max_length=10)
     permanant_address = models.TextField()
     email_address = models.CharField(max_length=200)
     current_address = models.TextField()
     created_date = models.DateTimeField(auto_now_add = True)
-    # updated_date = models.DateTimeField(auto_now = True)
 
 
     def __str__(self):
